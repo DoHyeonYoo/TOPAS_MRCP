@@ -22,7 +22,6 @@ dc:Ge/MyBox/RotY     = 0 deg
 dc:Ge/MyBox/RotZ     = 0 deg
 
 #Phantom *.ele, *.node and *.material file path
-#s:Ge/MyBox/Path     = "/Applications/topas/Phantoms/visual"
 s:Ge/MyBox/Path     = "/Applications/workspace/topas_extentions/TOPAS_MRCP/Phantoms"
 sc:Ge/MyBox/Sex      = "M"
 b:Ge/CheckForOverlaps = "False"
@@ -57,7 +56,7 @@ s:Sc/MRCPBinnedScorer/Quantity                  = "MRCPBinnedScorer"
 s:Sc/MRCPBinnedScorer/Component                 = "MyBox"
 b:Sc/MRCPBinnedScorer/OutputToConsole           = "TRUE"
 s:Sc/MRCPBinnedScorer/IfOutputFileAlreadyExists = "Overwrite"
-s:Sc/MRCPBinnedScorer/Output			= "Organdose111.csv"
+s:Sc/MRCPBinnedScorer/Output			= "Deposited_energy.csv"
 
 i:Ts/MaxInterruptedHistories = 500
 
@@ -68,4 +67,4 @@ b:Ts/ShowCPUTime = "True"
 
 #####Visual#####
 #s:Gr/ViewA/Type             = "OpenGL"
-#Ts/UseQt = "True"
+Ts/UseQt = "True"
