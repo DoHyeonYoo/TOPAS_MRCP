@@ -30,10 +30,12 @@ TOPAS installed with recommended OS system, C++ and cm ake versions, see topasht
 =========================================================================
 
 TOPAS-MRCP contains two main code 
+
 1. TOPAS_MRCP.cc
    Read the phantom data 
-   You have to prepare three phantom data files as *.ele, *node, and *material files.
+   A total of 3 files are required in the phantom folder such as *.ele, *node, and *material files.
 
-2. 
+2. MRCPBinnedScorer.cc
+   Calculate the organ dose as deposited energy for each organ
 
 
