@@ -1,7 +1,7 @@
 TOPAS-MRCP
 This is TOPAS-MRCP extension repository, a Monte Carlo simulation framework for evlautting the organ dose. 
 
-The TOPAS_MRCP extension doce was developed based on the Geant4 MC simulation code of 
+The TOPAS_MRCP extension code was developed based on the Geant4 MC simulation code of 
 international commission on radiological protection (ICRP) publication 145 "Adult Mesh-type Reference Computatioanl Phantoms"
 "https://icrp.org/publication.asp?id=ICRP%20Publication%20145"
 
