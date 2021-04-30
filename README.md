@@ -1,10 +1,13 @@
+--------------------------------------------------------------------------------------------------------------------------------
 TOPAS-MRCP
 This is TOPAS-MRCP extension repository, a Monte Carlo simulation framework for evlautting the organ dose. 
 
 The TOPAS_MRCP extension code was developed based on the Geant4 MC simulation code of 
 international commission on radiological protection (ICRP) publication 145 "Adult Mesh-type Reference Computatioanl Phantoms"
 "https://icrp.org/publication.asp?id=ICRP%20Publication%20145"
+--------------------------------------------------------------------------------------------------------------------------------
 
+--------------------------------------------------------------------------------------------------------------------------------
 GENERAL INFORMATION
 TOPAS installed with recommended OS system, C++ and cm ake versions, see topas
 https://topas.readthedocs.io/en/latest/getting-started/install.htm
@@ -23,3 +26,5 @@ Mac: cmake ./-DTOPAS_EXTENSIONS=/Applications/topas_extensions/TOPAS-MRCP make -
 
 5. Run the macro file MRCP.txt
 topas MRCP.txt
+--------------------------------------------------------------------------------------------------------------------------------
+
