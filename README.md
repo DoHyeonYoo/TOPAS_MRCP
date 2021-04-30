@@ -37,10 +37,10 @@ TOPAS-MRCP contains two main code
    
    A total of 3 files are required in the phantom folder such as *.ele, *node, and *material files.
    
-   You need to rename the file to MRCP.ele and MRCP.node
+   You must change the file name to MRCP.ele and MRCP.node. 
 
 2. MRCPBinnedScorer.cc
 
-   Calculate the organ dose as deposited energy for each organ
+   Calculate the organ dose as deposited energy for each organ.
 
 
