@@ -36,6 +36,8 @@ TOPAS-MRCP contains two main code
    Read the phantom data 
    
    A total of 3 files are required in the phantom folder such as *.ele, *node, and *material files.
+   
+   You need to rename the file to MRCP.ele and MRCP.node
 
 2. MRCPBinnedScorer.cc
 
