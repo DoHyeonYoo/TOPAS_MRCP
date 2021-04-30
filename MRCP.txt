@@ -1,50 +1,71 @@
-# MRCP_TOPAS
+#TOPAS_MRCP Macro Command
 
+#Number of threads (Currently Not Supported)
+#i:Ts/NumverOfThreads = 1
+
+#World Geometry
+s:Ge/World/Type = "TsBox"
+s:Ge/World/Material = "G4_Galactic"
+d:Ge/World/HLX = 2 m 
+d:Ge/World/HLY = 2 m 
+d:Ge/World/HLZ = 2 m 
+
+#Phantom Geometry
 s:Ge/MyBox/Type     = "TOPAS_MRCP"
-s:Ge/MyBox/Material = "Air"
-s:Ge/MyBox/Parent   = "World"
-s:Ge/MyBox/Path	    = "/Applications/workspace/topas/topas_extensions/TOPAS_MRCP/Phantoms/Liver"
-s:Ge/MyBox/Sex      = "M"
+sc:Ge/MyBox/Material = "G4_Galactic"
+sc:Ge/MyBox/Parent   = "World"
+dc:Ge/MyBox/TransX   = 0. m
+dc:Ge/MyBox/TransY   = 0 m
+dc:Ge/MyBox/TrasZ    = 0 m
+dc:Ge/MyBox/RotX     = 0 deg
+dc:Ge/MyBox/RotY     = 0 deg
+dc:Ge/MyBox/RotZ     = 0 deg
 
+#Phantom *.ele, *.node and *.material file path
+#s:Ge/MyBox/Path     = "/Applications/topas/Phantoms/visual"
+s:Ge/MyBox/Path     = "/Applications/topas/Phantoms"
+sc:Ge/MyBox/Sex      = "M"
 b:Ge/CheckForOverlaps = "False"
 b:Ge/CheckInsideEnvelopesForOverlaps = "False"
 
-s:Gr/ViewA/Type             = "OpenGL"
-i:Gr/ViewA/WindowSizeX      = 1024
-i:Gr/ViewA/WindowSizeY      = 768
-b:Gr/ViewA/IncludeAxes      = "True"
-d:Gr/ViewA/Theta            = 91 deg
-d:Gr/ViewA/Phi              = 90 deg
-s:Gr/ViewA/Projection       = "Perspective"
-d:Gr/ViewA/PerspectiveAngle = 0 deg
-u:Gr/ViewA/Zoom             = 5.
-b:Gr/ViewA/CopyOpenGLToPDF = "True"
-d:Gr/ViewA/AxesSize = 1. m
-
 s:So/MRCPsource/Type                     = "Beam"
-s:So/MRCPsource/Component                = "BeamPosition"
-s:So/MRCPsource/BeamParticle             = "gamma"
-d:So/MRCPsource/BeamEnergy               = 1. MeV
-u:So/MRCPsource/BeamEnergySpread         = 0.
-s:So/MRCPsource/BeamPositionCutoffShape  = "Ellipse"
-s:So/MRCPsource/BeamPositionDistribution = "Flat"
-d:So/MRCPsource/BeamPositionCutoffX      = 90. cm
-d:So/MRCPsource/BeamPositionCutoffY      = 90. cm
-s:So/MRCPsource/BeamAngularDistribution  = "None"
+sc:So/MRCPsource/Component                = "BeamPosition"
+sc:So/MRCPsource/BeamParticle             = "gamma"
+dc:So/MRCPsource/BeamEnergy               = 1. MeV
+uc:So/MRCPsource/BeamEnergySpread         = 0.0
+sc:So/MRCPsource/BeamPositionCutoffShape  = "Ellipse"
+sc:So/MRCPsource/BeamPositionDistribution = "Flat"
+dc:So/MRCPsource/BeamPositionCutoffX      = 90. cm
+dc:So/MRCPsource/BeamPositionCutoffY      = 90. cm
+sc:So/MRCPsource/BeamAngularDistribution  = "None"
 
 s:Ge/BeamPosition/Parent= "World"
 s:Ge/BeamPosition/Type= "Group"
 d:Ge/BeamPosition/TransX= 0. m
-d:Ge/BeamPosition/TransY= -1. m
+d:Ge/BeamPosition/TransY= 0. m
 d:Ge/BeamPosition/TransZ= 0. m
 d:Ge/BeamPosition/RotX= 90. deg
-i:So/MRCPsource/NumberOfhistoriesInRun = 10
 
-sv:Ph/Default/Modules = 1 "g4em-livermore"
+i:So/MRCPsource/NumberOfhistoriesInRun = 100
 
-s:Sc/EnergyDePAtPhantom/Quantity                  = "EnergyDeposit"
-s:Sc/EnergyDepAtPhantom/Component                 = "MyBox"
-b:Sc/EnergyDepAtPhantom/OutputToConsole           = "TRUE"
-s:Sc/EnergyDepAtPhantom/IfOutputFileAlreadyExists = "Overwrite"
+#Physics 
+sv:Ph/Default/Modules = 3 "g4em-livermore" "g4decay" "g4radioactivedecay"
+dc:Ph/Default/CutForAllParticles = 1 mm
 
-b:Ts/PauseBeforeQuit = "True"
+#Scoring
+s:Sc/MRCPBinnedScorer/Quantity                  = "MRCPBinnedScorer"
+s:Sc/MRCPBinnedScorer/Component                 = "MyBox"
+b:Sc/MRCPBinnedScorer/OutputToConsole           = "TRUE"
+s:Sc/MRCPBinnedScorer/IfOutputFileAlreadyExists = "Overwrite"
+s:Sc/MRCPBinnedScorer/Output			= "Organdose111.csv"
+
+i:Ts/MaxInterruptedHistories = 500
+
+#Calcualtion of the CPU Time
+b:Ts/ShowCPUTime = "True"
+
+#b:Ts/PauseBeforeQuit = "True"
+
+#####Visual#####
+#s:Gr/ViewA/Type             = "OpenGL"
+#Ts/UseQt = "True"
