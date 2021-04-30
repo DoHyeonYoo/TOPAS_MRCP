@@ -45,4 +45,7 @@ TOPAS-MRCP contains two main code
 
    Calculate the organ dose as deposited energy for each organ.
 
+********
+Current version of TOPAS-MRCP dose not supprot Multi-threading
+Please use only one CPU per simulation.
 
