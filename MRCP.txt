@@ -23,7 +23,7 @@ dc:Ge/MyBox/RotZ     = 0 deg
 
 #Phantom *.ele, *.node and *.material file path
 #s:Ge/MyBox/Path     = "/Applications/topas/Phantoms/visual"
-s:Ge/MyBox/Path     = "/Applications/topas/Phantoms"
+s:Ge/MyBox/Path     = "/Applications/workspace/topas_extentions/TOPAS_MRCP/Phantoms"
 sc:Ge/MyBox/Sex      = "M"
 b:Ge/CheckForOverlaps = "False"
 b:Ge/CheckInsideEnvelopesForOverlaps = "False"
