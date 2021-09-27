@@ -25,7 +25,7 @@ TOPAS installed with recommended OS system, C++ and cm ake versions, see topasht
   	Linux: cmake ./-DTOPAS_EXTENSIONS_DIR=~/topas_extensions/TOPAS-MRCP make -j 4 
 	  Mac: cmake ./-DTOPAS_EXTENSIONS=/Applications/topas_extensions/TOPAS-MRCP make -j 4
 
-5.	Run the macro file MRCP.txt topas MRCP.txt
+5.	Run the macro file MRCP.txt
 
 =========================================================================
 
