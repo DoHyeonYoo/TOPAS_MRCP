@@ -19,7 +19,7 @@ TOPAS installed with recommended OS system, C++ and cm ake versions, see topasht
     
 2.  Unzip TOPAS-MRCP directory in topas_extensions and navigate to the topas directory
 
-3.	Unzion the Geant4Headers.zip
+3.	Unzip the Geant4Headers.zip
 
 4.	Build the extensions 
   	Linux: cmake ./-DTOPAS_EXTENSIONS_DIR=~/topas_extensions/TOPAS-MRCP make -j 4 
